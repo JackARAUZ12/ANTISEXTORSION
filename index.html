@@ -214,7 +214,8 @@
         <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6">
           <h3 class="font-bold text-white">Líneas de apoyo</h3>
           <ul class="mt-3 space-y-2 text-sm text-slate-300 list-disc pl-5">
-            <li>Autoridades locales de ciberdelito (emergencias: 911/118 según tu país).</li>
+            <li>Autoridades locales de ciberdelito (emergencias: 911/
+                          <li>Autoridades locales de ciberdelito — en situaciones de emergencia comunícate al 911.</li>
             <li>Organizaciones contra la explotación y violencia digital.</li>
             <li>Apoyo psicológico y líneas de crisis en tu región.</li>
           </ul>
@@ -224,36 +225,25 @@
     </div>
   </section>
 
-  <!-- Solicitud de ayuda / Form -->
+  <!-- Solicitud de ayuda / Google Form -->
   <section id="ayuda" class="py-20 bg-gradient-to-b from-slate-900 to-slate-950">
     <div class="container mx-auto px-4 max-w-4xl">
       <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-6 md:p-10">
         <h2 class="text-2xl md:text-4xl font-extrabold">Solicitar ayuda confidencial</h2>
-        <p class="mt-2 text-slate-300">Envíanos los datos mínimos para iniciar la baja de contenido. Puedes escribir desde un correo alterno o un alias. Nunca compartiremos tu información sin tu permiso.</p>
-        <form class="mt-6 grid md:grid-cols-2 gap-4" onsubmit="handleSubmit(event)">
-          <div class="md:col-span-1">
-            <label class="text-sm text-slate-300">Nombre o alias</label>
-            <input required type="text" class="mt-1 w-full rounded-2xl bg-slate-800/70 border border-white/10 px-4 py-3 focus-ring" placeholder="Ej. Ana / alias"/>
-          </div>
-          <div class="md:col-span-1">
-            <label class="text-sm text-slate-300">Email de contacto</label>
-            <input required type="email" class="mt-1 w-full rounded-2xl bg-slate-800/70 border border-white/10 px-4 py-3 focus-ring" placeholder="tuemail@ejemplo.com"/>
-          </div>
-          <div class="md:col-span-2">
-            <label class="text-sm text-slate-300">Enlaces donde aparece el contenido</label>
-            <textarea required rows="4" class="mt-1 w-full rounded-2xl bg-slate-800/70 border border-white/10 px-4 py-3 focus-ring" placeholder="Pega aquí los links"></textarea>
-          </div>
-          <div class="md:col-span-2">
-            <label class="text-sm text-slate-300">Descripción breve (opcional)</label>
-            <textarea rows="3" class="mt-1 w-full rounded-2xl bg-slate-800/70 border border-white/10 px-4 py-3 focus-ring" placeholder="Cuéntanos lo mínimo necesario"></textarea>
-          </div>
-          <div class="md:col-span-2 flex flex-wrap items-center justify-between gap-4">
-            <div class="text-xs text-slate-400">Al enviar, confirmas que eres la persona afectada o su representante autorizado.</div>
-            <button type="submit" class="inline-flex items-center gap-2 rounded-2xl bg-emerald-500 px-5 py-3 font-semibold text-slate-900 hover:bg-emerald-400 focus-ring">Enviar solicitud</button>
-          </div>
-        </form>
-        <div id="successMsg" class="hidden mt-4 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-4 text-sm text-emerald-200">Gracias. Revisaremos tu caso con prioridad y te contactaremos por email.</div>
-        <div class="mt-4 text-sm text-slate-400">¿Prefieres un canal directo? Escríbenos: <a class="underline hover:text-white" href="mailto:contacto@antisextorsion.org">contacto@antisextorsion.org</a> • WhatsApp: <a class="underline hover:text-white" href="https://wa.me/50581294177" target="_blank" rel="noopener">+505 8129-4177</a></div>
+        <p class="mt-2 text-slate-300">Completa el formulario seguro de Google. Solo pedimos la información mínima para iniciar la baja de contenido. Tu caso se maneja con <strong>estricta confidencialidad</strong>.</p>
+
+        <div class="mt-6 rounded-2xl overflow-hidden border border-white/10 bg-slate-900">
+          <iframe
+            title="Formulario de ayuda ANTISEXTORSION"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfyn8rBvyqej-JUbXtj0wa5ynnS3OFYMEd0Uy4i9cMFt0aoQA/viewform?embedded=true"
+            width="100%"
+            height="1200"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0">Cargando…</iframe>
+        </div>
+
+        <p class="mt-4 text-sm text-slate-400">Si el formulario no carga, <a class="underline hover:text-white" href="https://docs.google.com/forms/d/e/1FAIpQLSfyn8rBvyqej-JUbXtj0wa5ynnS3OFYMEd0Uy4i9cMFt0aoQA/viewform?usp=header" target="_blank" rel="noopener">ábrelo en una nueva pestaña</a>.</p>
       </div>
     </div>
   </section>
@@ -316,7 +306,6 @@
         <p class="mt-3 text-slate-300">Escríbenos con total confianza. También podemos coordinar una llamada.</p>
         <ul class="mt-5 space-y-2 text-slate-300">
           <li><span class="text-white font-semibold">Email:</span> <a class="underline hover:text-white" href="mailto:contacto@antisextorsion.org">contacto@antisextorsion.org</a></li>
-          <li><span class="text-white font-semibold">WhatsApp:</span> <a class="underline hover:text-white" href="https://wa.me/50581294177" target="_blank" rel="noopener">+505 8129-4177</a></li>
           <li><span class="text-white font-semibold">Horario:</span> 24/7 para emergencias digitales.</li>
         </ul>
       </div>
@@ -353,7 +342,6 @@
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     menuBtn?.addEventListener('click', ()=> mobileMenu.classList.toggle('hidden'));
-    function handleSubmit(e){ e.preventDefault(); document.getElementById('successMsg').classList.remove('hidden'); e.target.reset(); }
   </script>
 </body>
 </html>
